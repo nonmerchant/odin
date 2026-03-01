@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="test-card" id="appCard">
+      <!-- MAIN INTRO / ENTRANCE -->
+      <div id="entrance-screen" class="screen">
+        <div class="entrance-header">
+          <h1>Shohruh<br />Mirzo</h1>
+        </div>
+        <div class="intro-description">
+            questionare for everyone
+        </div>
+
+        <div class="name-section">
+          <input
+            type="text"
+            id="player-name-input"
+            class="name-input"
+            placeholder="your name"
+            maxlength="24"
+            value="guest"
+          />
+          <button class="primary-btn" id="enterQuizBtn">begin 50 →</button>
+        </div>
+
+        <!-- <div class="question-hint" id="question-counter-display">
+          📚 <strong>100+</strong> questions in bank ·
+          <strong>50 random</strong> per test
+        </div> -->
+
+        <!-- LEADERBOARD -->
+        <div class="leaderboard-preview">
+          <div class="leaderboard-title">🏆 leaderboard / top minds</div>
+          <ul class="leaderboard-list" id="leaderboard-list"></ul>
+          <button
+            class="secondary-btn"
+            id="resetLeaderboardBtn"
+            style="margin-top: 18px"
+          >
+            clear scores
+          </button>
+        </div>
+        <div class="footer-note">elegant grammar · timeless</div>
+      </div>
+
+      <!-- QUIZ SCREEN (50 questions) -->
+      <div id="quiz-screen" class="screen hidden">
+        <div class="top-bar">
+          <span class="question-num" id="question-number">Question 1/50</span>
+          <span class="timer" id="timer-display">30:00</span>
+          <!-- 30 minutes for 50 questions -->
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-bar"></div>
+        </div>
+        <div class="question-text" id="q-text"></div>
+        <div class="options-grid" id="options-container"></div>
+      </div>
+
+      <!-- RESULT SCREEN -->
+      <div id="result-screen" class="screen hidden">
+        <div class="result-box">
+          <div class="score-circle">
+            <span class="score-number" id="final-score">0</span>
+            <span class="score-label">/ 50</span>
+          </div>
+          <div class="feedback-msg" id="feedback-text"></div>
+          <button class="primary-btn" id="restartFromResultBtn">
+            ↻ leaderboard
+          </button>
+          <div class="footer-note">fifty splendid questions</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./edasd.js"></script>
+</html>
